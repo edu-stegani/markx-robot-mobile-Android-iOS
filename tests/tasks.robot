@@ -7,6 +7,7 @@ Test Teardown    Finish Session
 
 *** Test Cases ***
 Criar nova tarefa com sucesso
+    [Tags]    create
     # Definindo a massa de teste
     ${task}    Set Variable    Study mobile automation
     # Removendo a massa de teste do banco de dados para não dar erro de duplicidade
@@ -17,6 +18,7 @@ Criar nova tarefa com sucesso
     Should have task     ${task}
 
 Remover tarefa da lista
+    [Tags]    remove
     # Definindo a massa de teste
     ${task}    Set Variable    Study mobile automation
     # Removendo a massa de teste do banco de dados para não dar erro de duplicidade
@@ -32,6 +34,7 @@ Remover tarefa da lista
     Wait Until Page Does Not Contain    ${task}
 
 Concluir tarefa da lista
+    [Tags]    finish
     # Definindo a massa de teste
     ${task}    Set Variable    Study mobile automation
     # Removendo a massa de teste do banco de dados para não dar erro de duplicidade
